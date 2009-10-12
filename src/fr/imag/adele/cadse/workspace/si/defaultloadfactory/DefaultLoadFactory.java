@@ -27,7 +27,7 @@ import fede.workspace.tool.loadmodel.model.jaxb.CItem;
 import fede.workspace.tool.loadmodel.model.jaxb.CItemType;
 import fede.workspace.tool.loadmodel.model.jaxb.CValuesType;
 import fr.imag.adele.cadse.core.CadseException;
-import fr.imag.adele.cadse.core.CadseRootCST;
+import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.CadseDomain;
@@ -39,7 +39,6 @@ import fr.imag.adele.cadse.core.impl.attribute.EnumAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.IntegerAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.ListAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.StringAttributeType;
-import fr.imag.adele.cadse.core.impl.attribute.SymbolicBitMapAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.TimeAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.UUIDAttributeType;
 import fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer;
@@ -107,7 +106,7 @@ public class DefaultLoadFactory implements ILoadFactory {
 
 	public IAttributeType<?> convertToAttributeType(IInitModel initEngine, Item parent, String cadseName,
 			CAttType attDefinition, ItemType attDefinitionType) throws CadseException {
-		if (attDefinitionType == CadseRootCST.LIST_ATTRIBUTE_TYPE) {
+		if (attDefinitionType == CadseGCST.LIST) {
 			List<CAttType> elements = attDefinition.getSubAttType();
 			if (elements == null || elements.size() != 1) {
 				throw new CadseException("cannot create value from {0} : bad definition of list", attDefinition
@@ -116,62 +115,62 @@ public class DefaultLoadFactory implements ILoadFactory {
 			ListAttributeType ret = new ListAttributeType(initEngine.getUUID(attDefinition.getId()),
 					getFlag(attDefinition), attDefinition.getKey(), getMin(attDefinition), getMax(attDefinition), null);
 			IAttributeType<?> subType = initEngine.convertToAttributeType(elements.get(0), ret, cadseName);
-			ret.commitLoadCreateLink(CadseRootCST.LIST_ATTRIBUTE_TYPE_lt_SUB_TYPE, subType);
+			ret.commitLoadCreateLink(CadseGCST.LIST_lt_SUB_TYPE, subType);
 			return ret;
 		}
-		if (attDefinitionType == CadseRootCST.BOOLEAN_ATTRIBUTE_TYPE) {
+		if (attDefinitionType == CadseGCST.BOOLEAN) {
 			BooleanAttributeType ret = new BooleanAttributeType(initEngine.getUUID(attDefinition.getId()),
 					getFlag(attDefinition), attDefinition.getKey(), attDefinition.getValue());
 			return ret;
 		}
-		if (attDefinitionType == CadseRootCST.STRING_ATTRIBUTE_TYPE) {
+		if (attDefinitionType == CadseGCST.STRING) {
 			StringAttributeType ret = new StringAttributeType(initEngine.getUUID(attDefinition.getId()),
 					getFlag(attDefinition), attDefinition.getKey(), attDefinition.getValue());
 			return ret;
 		}
-		if (attDefinitionType == CadseRootCST.INTEGER_ATTRIBUTE_TYPE) {
-			Integer min = createValue(initEngine, attDefinition, CadseRootCST.INTEGER_ATTRIBUTE_TYPE_at_MIN,
-					CadseRootCST.INTEGER_ATTRIBUTE_TYPE_at_MIN_);
-			Integer max = createValue(initEngine, attDefinition, CadseRootCST.INTEGER_ATTRIBUTE_TYPE_at_MAX,
-					CadseRootCST.INTEGER_ATTRIBUTE_TYPE_at_MAX_);
+		if (attDefinitionType == CadseGCST.INTEGER) {
+			Integer min = null; /*createValue(initEngine, attDefinition, CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MIN,
+					CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MIN_);*/
+			Integer max = null; /*createValue(initEngine, attDefinition, CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MAX,
+					CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MAX_);*/
 			;
 			IntegerAttributeType ret = new IntegerAttributeType(initEngine.getUUID(attDefinition.getId()),
 					getFlag(attDefinition), attDefinition.getKey(), min, max, attDefinition.getValue());
 			return ret;
 		}
 
-		if (attDefinitionType == CadseRootCST.DOUBLE_ATTRIBUTE_TYPE) {
-			Double min = createValue(initEngine, attDefinition, CadseRootCST.DOUBLE_ATTRIBUTE_TYPE_at_MIN,
-					CadseRootCST.DOUBLE_ATTRIBUTE_TYPE_at_MIN_);
-			Double max = createValue(initEngine, attDefinition, CadseRootCST.DOUBLE_ATTRIBUTE_TYPE_at_MAX,
-					CadseRootCST.DOUBLE_ATTRIBUTE_TYPE_at_MAX_);
+		if (attDefinitionType == CadseGCST.DOUBLE) {
+			Double min = null ; /*createValue(initEngine, attDefinition, CadseGCST.DOUBLE_at_MIN,
+					CadseGCST.DOUBLE_at_MIN_);*/
+			Double max = null; /*createValue(initEngine, attDefinition, CadseGCST.DOUBLE_at_MAX,
+					CadseGCST.DOUBLE_at_MAX_);*/
 			DoubleAttributeType ret = new DoubleAttributeType(initEngine.getUUID(attDefinition.getId()),
 					getFlag(attDefinition), attDefinition.getKey(), min, max, attDefinition.getValue());
 			return ret;
 		}
-		if (attDefinitionType == CadseRootCST.UUIDATTRIBUTE_TYPE) {
+		if (attDefinitionType == CadseGCST.UUID) {
 			UUIDAttributeType ret = new UUIDAttributeType(initEngine.getUUID(attDefinition.getId()), attDefinition
 					.getKey(), getFlag(attDefinition));
 			return ret;
 		}
-		if (attDefinitionType == CadseRootCST.TIME_ATTRIBUTE_TYPE) {
+		if (attDefinitionType == CadseGCST.TIME) {
 			TimeAttributeType ret = new TimeAttributeType(initEngine.getUUID(attDefinition.getId()), attDefinition
 					.getKey(), getFlag(attDefinition));
 			return ret;
 		}
-		if (attDefinitionType == CadseRootCST.SYMBOLIC_BIT_MAP_ATTRIBUTE_TYPE) {
+		/*if (attDefinitionType == CadseGCST.SYMBOLIC_BIT_MAP_ATTRIBUTE_TYPE) {
 			SymbolicBitMapAttributeType ret = new SymbolicBitMapAttributeType(
 					initEngine.getUUID(attDefinition.getId()), attDefinition.getKey(), getFlag(attDefinition), "0");
 			return ret;
-		}
-		if (attDefinitionType == CadseRootCST.DATE_ATTRIBUTE_TYPE) {
+		}*/
+		if (attDefinitionType == CadseGCST.DATE) {
 			DateAttributeType ret = new DateAttributeType(initEngine.getUUID(attDefinition.getId()), attDefinition
 					.getKey(), getFlag(attDefinition));
 			return ret;
 		}
-		if (attDefinitionType == CadseRootCST.ENUM_ATTRIBUTE_TYPE) {
-			String clazzname = createValue(initEngine, attDefinition, CadseRootCST.ENUM_ATTRIBUTE_TYPE_at_ENUM_CLAZZ,
-					CadseRootCST.ENUM_ATTRIBUTE_TYPE_at_ENUM_CLAZZ_);
+		if (attDefinitionType == CadseGCST.ENUM) {
+			String clazzname = createValue(initEngine, attDefinition, CadseGCST.ENUM_at_ENUM_CLAZZ,
+					CadseGCST.ENUM_at_ENUM_CLAZZ_);
 
 			Class<? extends Enum> clazz = classReferencer.loadClass(cadseName, clazzname);
 			if (clazz == null) {

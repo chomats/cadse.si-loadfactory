@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ipojo>
 	<component immediate="false" classname="fr.imag.adele.cadse.workspace.si.defaultloadfactory.DefaultLoadFactory" factory="fr.imag.adele.cadse.workspace.si.defaultloadfactory.DefaultLoadFactory" architecture="true">
-		<provides interface="fr.imag.adele.cadse.workspace.as.loadfactory.ILoadFactory"/>
+		<provides specification="fr.imag.adele.cadse.workspace.as.loadfactory.ILoadFactory"/>
 		<requires field="workspaceCU" optional="true" filter="(sam.domain.root=Workspace)"/>
 		<requires field="classReferencer" optional="false"/>
 	</component>
