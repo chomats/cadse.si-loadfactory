@@ -28,118 +28,48 @@ iPOJO-Components: component { $immediate="false" $classname="fr.imag.ad
  ="fr.imag.adele.cadse.workspace.si.defaultloadfactory.DefaultLoadFacto
  ry" $architecture="true" provides { $specification="fr.imag.adele.cads
  e.workspace.as.loadfactory.ILoadFactory" }manipulation { field { $name
- ="__MconvertToCItemType$fr_imag_adele_fede_workspace_as_initmodel_IIni
- tModel$fr_imag_adele_cadse_core_ItemType" $type="boolean" }field { $na
- me="__FclassReferencer" $type="boolean" }field { $name="classReference
- r" $type="fr.imag.adele.cadse.workspace.as.classreferencer.IClassRefer
- encer" }field { $name="__MconvertToCValue$fr_imag_adele_fede_workspace
- _as_initmodel_IInitModel$fede_workspace_tool_loadmodel_model_jaxb_CVal
- uesType$fr_imag_adele_cadse_core_attribute_IAttributeType" $type="bool
- ean" }field { $name="__MconvertToCAttType$fr_imag_adele_fede_workspace
- _as_initmodel_IInitModel$fr_imag_adele_cadse_core_attribute_IAttribute
- Type" $type="boolean" }field { $name="__MconvertToItemType$fr_imag_ade
- le_fede_workspace_as_initmodel_IInitModel$fede_workspace_tool_loadmode
- l_model_jaxb_CItemType" $type="boolean" }field { $name="__MgetFlag$fed
- e_workspace_tool_loadmodel_model_jaxb_CAttType" $type="boolean" }field
-  { $name="__IM" $type="org.apache.felix.ipojo.InstanceManager" }field 
- { $name="__MconvertToAttributeType$fr_imag_adele_fede_workspace_as_ini
- tmodel_IInitModel$fr_imag_adele_cadse_core_Item$java_lang_String$fede_
- workspace_tool_loadmodel_model_jaxb_CAttType$fr_imag_adele_cadse_core_
- ItemType" $type="boolean" }field { $name="__MgetMax$fede_workspace_too
- l_loadmodel_model_jaxb_CAttType" $type="boolean" }field { $name="__Mco
- nvertCadsegToCAttType$fr_imag_adele_fede_workspace_as_initmodel_IInitM
- odel$fr_imag_adele_cadse_core_Item" $type="boolean" }field { $name="__
- McreateValue$fr_imag_adele_fede_workspace_as_initmodel_IInitModel$fede
- _workspace_tool_loadmodel_model_jaxb_CItem$java_lang_String$fr_imag_ad
- ele_cadse_core_attribute_IAttributeType" $type="boolean" }field { $nam
- e="__FworkspaceCU" $type="boolean" }field { $name="__MconvertCadsegToC
- ItemType$fr_imag_adele_fede_workspace_as_initmodel_IInitModel$fr_imag_
- adele_cadse_core_Item" $type="boolean" }field { $name="__MgetMin$fede_
- workspace_tool_loadmodel_model_jaxb_CAttType" $type="boolean" }field {
-  $name="__MconvertToAttributeType$fr_imag_adele_fede_workspace_as_init
- model_IInitModel$fede_workspace_tool_loadmodel_model_jaxb_CValuesType"
-  $type="boolean" }field { $name="workspaceCU" $type="fr.imag.adele.cad
- se.core.CadseDomain" }method { $name="__getworkspaceCU" $return="fr.im
- ag.adele.cadse.core.CadseDomain" }method { $arguments="{fr.imag.adele.
- cadse.core.CadseDomain}" $name="__setworkspaceCU" }method { $name="__g
- etclassReferencer" $return="fr.imag.adele.cadse.workspace.as.classrefe
- rencer.IClassReferencer" }method { $arguments="{fr.imag.adele.cadse.wo
- rkspace.as.classreferencer.IClassReferencer}" $name="__setclassReferen
- cer" }method { $name="$init" }method { $arguments="{org.apache.felix.i
- pojo.InstanceManager}" $name="$init" }method { $arguments="{fr.imag.ad
- ele.fede.workspace.as.initmodel.IInitModel,fr.imag.adele.cadse.core.It
- em}" $name="convertCadsegToCAttType" $return="fede.workspace.tool.load
- model.model.jaxb.CAttType" }method { $arguments="{fr.imag.adele.fede.w
- orkspace.as.initmodel.IInitModel,fr.imag.adele.cadse.core.Item}" $name
- ="__convertCadsegToCAttType" $return="fede.workspace.tool.loadmodel.mo
- del.jaxb.CAttType" }method { $arguments="{fr.imag.adele.fede.workspace
- .as.initmodel.IInitModel,fr.imag.adele.cadse.core.Item}" $name="conver
- tCadsegToCItemType" $return="fede.workspace.tool.loadmodel.model.jaxb.
- CItemType" }method { $arguments="{fr.imag.adele.fede.workspace.as.init
- model.IInitModel,fr.imag.adele.cadse.core.Item}" $name="__convertCadse
- gToCItemType" $return="fede.workspace.tool.loadmodel.model.jaxb.CItemT
- ype" }method { $arguments="{fede.workspace.tool.loadmodel.model.jaxb.C
- AttType}" $name="getFlag" $return="int" }method { $arguments="{fede.wo
- rkspace.tool.loadmodel.model.jaxb.CAttType}" $name="__getFlag" $return
- ="int" }method { $arguments="{fede.workspace.tool.loadmodel.model.jaxb
- .CAttType}" $name="getMin" $return="int" }method { $arguments="{fede.w
- orkspace.tool.loadmodel.model.jaxb.CAttType}" $name="__getMin" $return
- ="int" }method { $arguments="{fede.workspace.tool.loadmodel.model.jaxb
- .CAttType}" $name="getMax" $return="int" }method { $arguments="{fede.w
- orkspace.tool.loadmodel.model.jaxb.CAttType}" $name="__getMax" $return
- ="int" }method { $arguments="{fr.imag.adele.fede.workspace.as.initmode
- l.IInitModel,fr.imag.adele.cadse.core.Item,java.lang.String,fede.works
- pace.tool.loadmodel.model.jaxb.CAttType,fr.imag.adele.cadse.core.ItemT
- ype}" $name="convertToAttributeType" $return="fr.imag.adele.cadse.core
- .attribute.IAttributeType" }method { $arguments="{fr.imag.adele.fede.w
- orkspace.as.initmodel.IInitModel,fr.imag.adele.cadse.core.Item,java.la
- ng.String,fede.workspace.tool.loadmodel.model.jaxb.CAttType,fr.imag.ad
- ele.cadse.core.ItemType}" $name="__convertToAttributeType" $return="fr
- .imag.adele.cadse.core.attribute.IAttributeType" }method { $arguments=
- "{fr.imag.adele.fede.workspace.as.initmodel.IInitModel,fede.workspace.
- tool.loadmodel.model.jaxb.CItem,java.lang.String,fr.imag.adele.cadse.c
- ore.attribute.IAttributeType}" $name="createValue" $return="java.lang.
- Object" }method { $arguments="{fr.imag.adele.fede.workspace.as.initmod
- el.IInitModel,fede.workspace.tool.loadmodel.model.jaxb.CItem,java.lang
- .String,fr.imag.adele.cadse.core.attribute.IAttributeType}" $name="__c
- reateValue" $return="java.lang.Object" }method { $arguments="{fr.imag.
- adele.fede.workspace.as.initmodel.IInitModel,fede.workspace.tool.loadm
- odel.model.jaxb.CValuesType}" $name="convertToAttributeType" $return="
- fr.imag.adele.cadse.core.attribute.IAttributeType" }method { $argument
+ ="classReferencer" $type="fr.imag.adele.cadse.workspace.as.classrefere
+ ncer.IClassReferencer" }field { $name="workspaceCU" $type="fr.imag.ade
+ le.cadse.core.CadseDomain" }method { $name="$init" }method { $argument
+ s="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel,fr.imag.adele
+ .cadse.core.Item}" $name="convertCadsegToCAttType" $return="fede.works
+ pace.tool.loadmodel.model.jaxb.CAttType" }method { $arguments="{fr.ima
+ g.adele.fede.workspace.as.initmodel.IInitModel,fr.imag.adele.cadse.cor
+ e.Item}" $name="convertCadsegToCItemType" $return="fede.workspace.tool
+ .loadmodel.model.jaxb.CItemType" }method { $arguments="{fede.workspace
+ .tool.loadmodel.model.jaxb.CAttType}" $name="getFlag" $return="int" }m
+ ethod { $arguments="{fede.workspace.tool.loadmodel.model.jaxb.CAttType
+ }" $name="getMin" $return="int" }method { $arguments="{fede.workspace.
+ tool.loadmodel.model.jaxb.CAttType}" $name="getMax" $return="int" }met
+ hod { $arguments="{fr.imag.adele.fede.workspace.as.initmodel.IInitMode
+ l,fr.imag.adele.cadse.core.Item,java.lang.String,fede.workspace.tool.l
+ oadmodel.model.jaxb.CAttType,fr.imag.adele.cadse.core.ItemType}" $name
+ ="convertToAttributeType" $return="fr.imag.adele.cadse.core.attribute.
+ IAttributeType" }method { $arguments="{fr.imag.adele.fede.workspace.as
+ .initmodel.IInitModel,fede.workspace.tool.loadmodel.model.jaxb.CItem,j
+ ava.lang.String,fr.imag.adele.cadse.core.attribute.IAttributeType}" $n
+ ame="createValue" $return="java.lang.Object" }method { $arguments="{fr
+ .imag.adele.fede.workspace.as.initmodel.IInitModel,fede.workspace.tool
+ .loadmodel.model.jaxb.CValuesType}" $name="convertToAttributeType" $re
+ turn="fr.imag.adele.cadse.core.attribute.IAttributeType" }method { $ar
+ guments="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel,fr.imag
+ .adele.cadse.core.attribute.IAttributeType}" $name="convertToCAttType"
+  $return="fede.workspace.tool.loadmodel.model.jaxb.CAttType" }method {
+  $arguments="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel,fr.
+ imag.adele.cadse.core.ItemType}" $name="convertToCItemType" $return="f
+ ede.workspace.tool.loadmodel.model.jaxb.CItemType" }method { $argument
  s="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel,fede.workspac
- e.tool.loadmodel.model.jaxb.CValuesType}" $name="__convertToAttributeT
- ype" $return="fr.imag.adele.cadse.core.attribute.IAttributeType" }meth
- od { $arguments="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel
- ,fr.imag.adele.cadse.core.attribute.IAttributeType}" $name="convertToC
- AttType" $return="fede.workspace.tool.loadmodel.model.jaxb.CAttType" }
- method { $arguments="{fr.imag.adele.fede.workspace.as.initmodel.IInitM
- odel,fr.imag.adele.cadse.core.attribute.IAttributeType}" $name="__conv
- ertToCAttType" $return="fede.workspace.tool.loadmodel.model.jaxb.CAttT
- ype" }method { $arguments="{fr.imag.adele.fede.workspace.as.initmodel.
- IInitModel,fr.imag.adele.cadse.core.ItemType}" $name="convertToCItemTy
- pe" $return="fede.workspace.tool.loadmodel.model.jaxb.CItemType" }meth
- od { $arguments="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel
- ,fr.imag.adele.cadse.core.ItemType}" $name="__convertToCItemType" $ret
- urn="fede.workspace.tool.loadmodel.model.jaxb.CItemType" }method { $ar
- guments="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel,fede.wo
- rkspace.tool.loadmodel.model.jaxb.CItemType}" $name="convertToItemType
- " $return="fr.imag.adele.cadse.core.ItemType" }method { $arguments="{f
- r.imag.adele.fede.workspace.as.initmodel.IInitModel,fede.workspace.too
- l.loadmodel.model.jaxb.CItemType}" $name="__convertToItemType" $return
- ="fr.imag.adele.cadse.core.ItemType" }method { $arguments="{fr.imag.ad
- ele.fede.workspace.as.initmodel.IInitModel,fede.workspace.tool.loadmod
- el.model.jaxb.CValuesType,fr.imag.adele.cadse.core.attribute.IAttribut
- eType}" $name="convertToCValue" $return="java.lang.Object" }method { $
- arguments="{fr.imag.adele.fede.workspace.as.initmodel.IInitModel,fede.
- workspace.tool.loadmodel.model.jaxb.CValuesType,fr.imag.adele.cadse.co
- re.attribute.IAttributeType}" $name="__convertToCValue" $return="java.
- lang.Object" }method { $name="$SWITCH_TABLE$fede$workspace$tool$loadmo
- del$model$jaxb$ValueTypeType" $return="int[]" }interface { $name="fr.i
- mag.adele.cadse.workspace.as.loadfactory.ILoadFactory" }}requires { $f
- ield="workspaceCU" $optional="true" $filter="(sam.domain.root=Workspac
- e)" }requires { $field="classReferencer" $optional="false" }}instance 
- { $component="fr.imag.adele.cadse.workspace.si.defaultloadfactory.Defa
- ultLoadFactory" $name="fr.imag.adele.cadse.si.workspace.defaultloadfac
- tory.instance" }
+ e.tool.loadmodel.model.jaxb.CItemType}" $name="convertToItemType" $ret
+ urn="fr.imag.adele.cadse.core.ItemType" }method { $arguments="{fr.imag
+ .adele.fede.workspace.as.initmodel.IInitModel,fede.workspace.tool.load
+ model.model.jaxb.CValuesType,fr.imag.adele.cadse.core.attribute.IAttri
+ buteType}" $name="convertToCValue" $return="java.lang.Object" }method 
+ { $name="$SWITCH_TABLE$fede$workspace$tool$loadmodel$model$jaxb$ValueT
+ ypeType" $return="int[]" }interface { $name="fr.imag.adele.cadse.works
+ pace.as.loadfactory.ILoadFactory" }}requires { $field="workspaceCU" $o
+ ptional="true" $filter="(sam.domain.root=Workspace)" }requires { $fiel
+ d="classReferencer" $optional="false" }}instance { $component="fr.imag
+ .adele.cadse.workspace.si.defaultloadfactory.DefaultLoadFactory" $name
+ ="fr.imag.adele.cadse.si.workspace.defaultloadfactory.instance" }
 ipojo-auto-start: true
 
