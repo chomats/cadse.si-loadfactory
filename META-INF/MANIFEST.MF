@@ -12,7 +12,7 @@ Created-By: Apache Maven Bundle Plugin
 Bundle-Vendor: Adele/LIG/ Grenoble University, France
 Build-Jdk: 1.6.0_17
 Bundle-Version: 2.3.0.SNAPSHOT
-Bnd-LastModified: 1261581146609
+Bnd-LastModified: 1261581195227
 Bundle-ManifestVersion: 2
 Import-Package: fr.imag.adele.cadse.core,fr.imag.adele.cadse.core.attr
  ibute,fr.imag.adele.cadse.core.impl.attribute,fr.imag.adele.cadse.wor
