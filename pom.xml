@@ -27,7 +27,7 @@
                         <Bundle-SymbolicName>${pom.name};singleton:=true</Bundle-SymbolicName>
                         <Bundle-Name>${pom.name}</Bundle-Name>
                         <Bundle-Description>${pom.description}</Bundle-Description>
-                        <Export-Package>fr.imag.adele.cadse.workspace.si.defaultclassreferencer*</Export-Package>
+                        <Export-Package>fr.imag.adele.cadse.workspace.si.defaultloadfactory*</Export-Package>
                         <Private-Package></Private-Package>
                         <!-- Include-Resource> META-INF/LICENSE=LICENSE,
               plugin.xml=plugin.xml, plugin.properties=plugin.properties
