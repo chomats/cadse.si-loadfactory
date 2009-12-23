@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Export-Package: fr.imag.adele.cadse.workspace.si.defaultloadfactory;us
- es:="fr.imag.adele.cadse.workspace.as.classreferencer,fr.imag.adele.c
- adse.core.impl.attribute,fr.imag.adele.cadse.core,org.apache.felix.ip
- ojo,fr.imag.adele.cadse.core.attribute,fr.imag.adele.cadse.workspace.
- as.loadfactory,fr.imag.adele.fede.workspace.as.initmodel.jaxb,fr.imag
- .adele.fede.workspace.as.initmodel"
+ es:="fr.imag.adele.fede.workspace.as.initmodel.jaxb,fr.imag.adele.cad
+ se.workspace.as.classreferencer,fr.imag.adele.cadse.core.impl.attribu
+ te,fr.imag.adele.cadse.core,fr.imag.adele.cadse.core.attribute,fr.ima
+ g.adele.cadse.workspace.as.loadfactory,fr.imag.adele.fede.workspace.a
+ s.initmodel"
 Built-By: chomats
 Tool: Bnd-0.0.357
 Bundle-Name: fr.imag.adele.cadse.si.workspace.defaultloadfactory
@@ -12,14 +12,14 @@ Created-By: Apache Maven Bundle Plugin
 Bundle-Vendor: Adele/LIG/ Grenoble University, France
 Build-Jdk: 1.6.0_17
 Bundle-Version: 2.3.0.SNAPSHOT
-Bnd-LastModified: 1261575243986
+Bnd-LastModified: 1261581146609
 Bundle-ManifestVersion: 2
 Import-Package: fr.imag.adele.cadse.core,fr.imag.adele.cadse.core.attr
  ibute,fr.imag.adele.cadse.core.impl.attribute,fr.imag.adele.cadse.wor
  kspace.as.classreferencer,fr.imag.adele.cadse.workspace.as.loadfactor
  y,fr.imag.adele.cadse.workspace.si.defaultloadfactory,fr.imag.adele.f
  ede.workspace.as.initmodel,fr.imag.adele.fede.workspace.as.initmodel.
- jaxb,org.apache.felix.ipojo
+ jaxb
 Bundle-DocURL: http://www-adele.imag.fr/
 Bundle-SymbolicName: fr.imag.adele.cadse.si.workspace.defaultloadfacto
  ry;singleton:=true
