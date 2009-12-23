@@ -22,10 +22,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import fede.workspace.tool.loadmodel.model.jaxb.CAttType;
-import fede.workspace.tool.loadmodel.model.jaxb.CItem;
-import fede.workspace.tool.loadmodel.model.jaxb.CItemType;
-import fede.workspace.tool.loadmodel.model.jaxb.CValuesType;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
@@ -44,6 +40,10 @@ import fr.imag.adele.cadse.core.impl.attribute.UUIDAttributeType;
 import fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer;
 import fr.imag.adele.cadse.workspace.as.loadfactory.ILoadFactory;
 import fr.imag.adele.fede.workspace.as.initmodel.IInitModel;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CAttType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItem;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType;
 
 /**
  * @generated
