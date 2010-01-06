@@ -197,7 +197,7 @@ public class DefaultLoadFactory implements ILoadFactory {
 	 * (non-Javadoc)
 	 * 
 	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToAttributeType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fede.workspace.tool.loadmodel.model.jaxb.CValuesType)
+	 *      fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType)
 	 */
 	public IAttributeType<?> convertToAttributeType(IInitModel initEngine, CValuesType attType) {
 		// TODO Auto-generated method stub
@@ -230,7 +230,7 @@ public class DefaultLoadFactory implements ILoadFactory {
 	 * (non-Javadoc)
 	 * 
 	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToItemType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fede.workspace.tool.loadmodel.model.jaxb.CItemType)
+	 *      fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType)
 	 */
 	public ItemType convertToItemType(IInitModel initEngine, CItemType itemType) {
 		// TODO Auto-generated method stub
