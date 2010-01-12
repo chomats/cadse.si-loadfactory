@@ -22,10 +22,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import fede.workspace.tool.loadmodel.model.jaxb.CAttType;
-import fede.workspace.tool.loadmodel.model.jaxb.CItem;
-import fede.workspace.tool.loadmodel.model.jaxb.CItemType;
-import fede.workspace.tool.loadmodel.model.jaxb.CValuesType;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
@@ -44,6 +40,10 @@ import fr.imag.adele.cadse.core.impl.attribute.UUIDAttributeType;
 import fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer;
 import fr.imag.adele.cadse.workspace.as.loadfactory.ILoadFactory;
 import fr.imag.adele.fede.workspace.as.initmodel.IInitModel;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CAttType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItem;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType;
 
 /**
  * @generated
@@ -197,7 +197,7 @@ public class DefaultLoadFactory implements ILoadFactory {
 	 * (non-Javadoc)
 	 * 
 	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToAttributeType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fede.workspace.tool.loadmodel.model.jaxb.CValuesType)
+	 *      fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType)
 	 */
 	public IAttributeType<?> convertToAttributeType(IInitModel initEngine, CValuesType attType) {
 		// TODO Auto-generated method stub
@@ -230,7 +230,7 @@ public class DefaultLoadFactory implements ILoadFactory {
 	 * (non-Javadoc)
 	 * 
 	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToItemType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fede.workspace.tool.loadmodel.model.jaxb.CItemType)
+	 *      fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType)
 	 */
 	public ItemType convertToItemType(IInitModel initEngine, CItemType itemType) {
 		// TODO Auto-generated method stub
