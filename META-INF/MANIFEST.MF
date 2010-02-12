@@ -5,13 +5,13 @@ Export-Package: fr.imag.adele.cadse.workspace.si.defaultloadfactory;us
  .core.attribute,fr.imag.adele.cadse.workspace.as.loadfactory,fr.imag.
  adele.fede.workspace.as.initmodel.jaxb,fr.imag.adele.fede.workspace.a
  s.initmodel";version="2.3.0"
-Built-By: chomats
+Built-By: etienne
 Tool: Bnd-0.0.357
 Bundle-Name: fr.imag.adele.cadse.si.defaultloadfactory
 Created-By: Apache Maven Bundle Plugin
 Bundle-Vendor: Adele/LIG/ Grenoble University, France
-Build-Jdk: 1.6.0_17
-Bundle-Version: 2.3.0.SNAPSHOT
+Build-Jdk: 1.6.0_0
+Bundle-Version: 2.3.0.SNAPSHOT-201002121709
 Ipojo-auto-start: true
 Bundle-ManifestVersion: 2
 Import-Package: fr.imag.adele.cadse.core;version="2.3",fr.imag.adele.c
