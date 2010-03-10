@@ -22,11 +22,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import fr.imag.adele.cadse.core.CadseDomain;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
-import fr.imag.adele.cadse.core.CadseDomain;
 import fr.imag.adele.cadse.core.attribute.IAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.BooleanAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.DateAttributeType;
@@ -53,18 +53,18 @@ public class DefaultLoadFactory implements ILoadFactory {
 	/**
 	 * @generated
 	 */
-	CadseDomain		workspaceCU;
+	CadseDomain workspaceCU;
 
 	/**
 	 * @generated
 	 */
-	IClassReferencer	classReferencer;
+	IClassReferencer classReferencer;
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertCadsegToCAttType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fr.imag.adele.cadse.core.Item)
+	 * @see
+	 * fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertCadsegToCAttType(fr.imag.adele
+	 * .fede.workspace.as.initmodel.IInitModel, fr.imag.adele.cadse.core.Item)
 	 */
 	public CAttType convertCadsegToCAttType(IInitModel initEngine, Item attributeType) {
 		// TODO Auto-generated method stub
@@ -73,9 +73,9 @@ public class DefaultLoadFactory implements ILoadFactory {
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertCadsegToCItemType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fr.imag.adele.cadse.core.Item)
+	 * @see
+	 * fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertCadsegToCItemType(fr.imag.adele
+	 * .fede.workspace.as.initmodel.IInitModel, fr.imag.adele.cadse.core.Item)
 	 */
 	public CItemType convertCadsegToCItemType(IInitModel initEngine, Item itemType) {
 		// TODO Auto-generated method stub
@@ -84,10 +84,10 @@ public class DefaultLoadFactory implements ILoadFactory {
 
 	private int getFlag(CAttType type) {
 		if (type.getFlag() != null) {
-			return type.getFlag().intValue() | (type.getMin() == 1 ? Item.MUST_BE_INITIALIZED_AT_CREATION_TIME : 0);
+			return type.getFlag().intValue() | (type.getMin() == 1 ? Item.SHOW_IN_DEFAULT_CP : 0);
 		}
 
-		return type.getMin() == 1 ? Item.MUST_BE_INITIALIZED_AT_CREATION_TIME : 0 + Item.DEFAULT_FLAG;
+		return type.getMin() == 1 ? Item.SHOW_IN_DEFAULT_CP : 0 + Item.DEFAULT_FLAG;
 	}
 
 	private int getMin(CAttType type) {
@@ -129,10 +129,14 @@ public class DefaultLoadFactory implements ILoadFactory {
 			return ret;
 		}
 		if (attDefinitionType == CadseGCST.INTEGER) {
-			Integer min = null; /*createValue(initEngine, attDefinition, CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MIN,
-					CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MIN_);*/
-			Integer max = null; /*createValue(initEngine, attDefinition, CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MAX,
-					CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MAX_);*/
+			Integer min = null; /*
+								 * createValue(initEngine, attDefinition, CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MIN,
+								 * CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MIN_);
+								 */
+			Integer max = null; /*
+								 * createValue(initEngine, attDefinition, CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MAX,
+								 * CadseGCST.INTEGER_ATTRIBUTE_TYPE_at_MAX_);
+								 */
 			;
 			IntegerAttributeType ret = new IntegerAttributeType(initEngine.getUUID(attDefinition.getId()),
 					getFlag(attDefinition), attDefinition.getKey(), min, max, attDefinition.getValue());
@@ -140,10 +144,14 @@ public class DefaultLoadFactory implements ILoadFactory {
 		}
 
 		if (attDefinitionType == CadseGCST.DOUBLE) {
-			Double min = null ; /*createValue(initEngine, attDefinition, CadseGCST.DOUBLE_at_MIN,
-					CadseGCST.DOUBLE_at_MIN_);*/
-			Double max = null; /*createValue(initEngine, attDefinition, CadseGCST.DOUBLE_at_MAX,
-					CadseGCST.DOUBLE_at_MAX_);*/
+			Double min = null; /*
+								 * createValue(initEngine, attDefinition, CadseGCST.DOUBLE_at_MIN,
+								 * CadseGCST.DOUBLE_at_MIN_);
+								 */
+			Double max = null; /*
+								 * createValue(initEngine, attDefinition, CadseGCST.DOUBLE_at_MAX,
+								 * CadseGCST.DOUBLE_at_MAX_);
+								 */
 			DoubleAttributeType ret = new DoubleAttributeType(initEngine.getUUID(attDefinition.getId()),
 					getFlag(attDefinition), attDefinition.getKey(), min, max, attDefinition.getValue());
 			return ret;
@@ -158,11 +166,11 @@ public class DefaultLoadFactory implements ILoadFactory {
 					.getKey(), getFlag(attDefinition));
 			return ret;
 		}
-		/*if (attDefinitionType == CadseGCST.SYMBOLIC_BIT_MAP_ATTRIBUTE_TYPE) {
-			SymbolicBitMapAttributeType ret = new SymbolicBitMapAttributeType(
-					initEngine.getUUID(attDefinition.getId()), attDefinition.getKey(), getFlag(attDefinition), "0");
-			return ret;
-		}*/
+		/*
+		 * if (attDefinitionType == CadseGCST.SYMBOLIC_BIT_MAP_ATTRIBUTE_TYPE) { SymbolicBitMapAttributeType ret = new
+		 * SymbolicBitMapAttributeType( initEngine.getUUID(attDefinition.getId()), attDefinition.getKey(),
+		 * getFlag(attDefinition), "0"); return ret; }
+		 */
 		if (attDefinitionType == CadseGCST.DATE) {
 			DateAttributeType ret = new DateAttributeType(initEngine.getUUID(attDefinition.getId()), attDefinition
 					.getKey(), getFlag(attDefinition));
@@ -195,9 +203,9 @@ public class DefaultLoadFactory implements ILoadFactory {
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToAttributeType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType)
+	 * @see
+	 * fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToAttributeType(fr.imag.adele.
+	 * fede.workspace.as.initmodel.IInitModel, fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType)
 	 */
 	public IAttributeType<?> convertToAttributeType(IInitModel initEngine, CValuesType attType) {
 		// TODO Auto-generated method stub
@@ -206,9 +214,9 @@ public class DefaultLoadFactory implements ILoadFactory {
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToCAttType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fr.imag.adele.cadse.core.attribute.IAttributeType)
+	 * @see
+	 * fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToCAttType(fr.imag.adele.fede.
+	 * workspace.as.initmodel.IInitModel, fr.imag.adele.cadse.core.attribute.IAttributeType)
 	 */
 	public CAttType convertToCAttType(IInitModel initEngine, IAttributeType<?> attributeType) {
 		// TODO Auto-generated method stub
@@ -217,9 +225,9 @@ public class DefaultLoadFactory implements ILoadFactory {
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToCItemType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fr.imag.adele.cadse.core.ItemType)
+	 * @see
+	 * fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToCItemType(fr.imag.adele.fede
+	 * .workspace.as.initmodel.IInitModel, fr.imag.adele.cadse.core.ItemType)
 	 */
 	public CItemType convertToCItemType(IInitModel initEngine, ItemType itemType) {
 		// TODO Auto-generated method stub
@@ -228,9 +236,9 @@ public class DefaultLoadFactory implements ILoadFactory {
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToItemType(fr.imag.adele.fede.workspace.as.initmodel.IInitModel,
-	 *      fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType)
+	 * @see
+	 * fr.imag.adele.cadse.workspace.as.loadandpersistencefactory.ILoadFactory#convertToItemType(fr.imag.adele.fede.
+	 * workspace.as.initmodel.IInitModel, fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType)
 	 */
 	public ItemType convertToItemType(IInitModel initEngine, CItemType itemType) {
 		// TODO Auto-generated method stub
@@ -240,32 +248,32 @@ public class DefaultLoadFactory implements ILoadFactory {
 	public Object convertToCValue(IInitModel initEngine, CValuesType value, IAttributeType<?> type) {
 		if (value.getType() != null) {
 			switch (value.getType()) {
-				case LIST: {
-					List<Object> ret = new ArrayList<Object>();
-					List<CValuesType> elements = value.getElement();
-					for (CValuesType ct : elements) {
-						ret.add(initEngine.convertToCValue(ct, null));
-					}
-					return ret;
+			case LIST: {
+				List<Object> ret = new ArrayList<Object>();
+				List<CValuesType> elements = value.getElement();
+				for (CValuesType ct : elements) {
+					ret.add(initEngine.convertToCValue(ct, null));
 				}
-				case STRUCT:
-				case MAP: {
-					HashMap<String, Object> ret = new HashMap<String, Object>();
-					List<CValuesType> elements = value.getElement();
-					for (CValuesType ct : elements) {
-						ret.put(ct.getKey(), initEngine.convertToCValue(ct, null));
-					}
-					return ret;
+				return ret;
+			}
+			case STRUCT:
+			case MAP: {
+				HashMap<String, Object> ret = new HashMap<String, Object>();
+				List<CValuesType> elements = value.getElement();
+				for (CValuesType ct : elements) {
+					ret.put(ct.getKey(), initEngine.convertToCValue(ct, null));
 				}
-				case BOOLEAN: {
-					return new Boolean(value.getValue());
-				}
-				case STRING: {
-					return value.getValue();
-				}
-				case INTEGER: {
-					return new Integer(value.getValue());
-				}
+				return ret;
+			}
+			case BOOLEAN: {
+				return new Boolean(value.getValue());
+			}
+			case STRING: {
+				return value.getValue();
+			}
+			case INTEGER: {
+				return new Integer(value.getValue());
+			}
 			}
 		}
 		return null;
