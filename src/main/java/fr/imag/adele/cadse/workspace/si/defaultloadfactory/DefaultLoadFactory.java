@@ -38,7 +38,7 @@ import fr.imag.adele.cadse.core.impl.attribute.StringAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.TimeAttributeType;
 import fr.imag.adele.cadse.core.impl.attribute.UUIDAttributeType;
 import fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer;
-import fr.imag.adele.cadse.workspace.as.loadfactory.ILoadFactory;
+import fr.imag.adele.cadse.workspace.as.loadservice.ILoadFactory;
 import fr.imag.adele.fede.workspace.as.initmodel.IInitModel;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CAttType;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItem;
